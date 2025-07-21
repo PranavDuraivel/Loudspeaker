@@ -1,6 +1,6 @@
 # Moving Coil Loudspeaker Design
 
-A complete analytical and numerical study of a **midrange moving coil loudspeaker**n. This project models the loudspeaker from first principles, simulates it using COMSOL Multiphysics, and evaluates its performance through SPL, impedance, and efficiency metrics.
+A complete analytical and numerical study of a **midrange moving coil loudspeaker**. This project models the loudspeaker from first principles, simulates it using COMSOL Multiphysics, and evaluates its performance through SPL, impedance, and efficiency metrics.
 
 ---
 

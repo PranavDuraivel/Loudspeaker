@@ -76,7 +76,7 @@ This project presents the **design, analytical modeling, and numerical simulatio
 
 ### ⚙️ Real & Imaginary Parts of Impedance
 
-| ![Real/Imag Impedance](./figures/real_imag_impedance.png) |
+| ![Real/Imag Impedance](./figures/real_imag_impedance_plot.png) |
 |:--:|
 | *Figure: Real and imaginary parts of impedance — shows energy dissipation and phase behavior across frequency* |
 

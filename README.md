@@ -2,8 +2,7 @@
 
 ![Python](https://img.shields.io/badge/Code-Python-blue?logo=python)
 ![COMSOL](https://img.shields.io/badge/Simulation-COMSOL-informational)
-![Power BI](https://img.shields.io/badge/Visualization-Matplotlib-yellow)
-![Project Type](https://img.shields.io/badge/Type-Acoustic_Engineering-critical)
+![Project Type](https://img.shields.io/badge/Acoustic_Engineering-critical)
 
 This project presents the **design, analytical modeling, and numerical simulation** of a midrange **moving coil loudspeaker**. The system is designed to reproduce speech and music in the 150 Hz – 5 kHz range with **controlled SPL**, **efficient diaphragm motion**, and **realistic cabinet modeling**.
 

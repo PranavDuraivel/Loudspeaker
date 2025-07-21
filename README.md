@@ -58,7 +58,7 @@ This project presents the **design, analytical modeling, and numerical simulatio
 
 ---
 
-### ⚡ Electrical Impedance
+### ⚡ Electrical Impedance 
 
 | ![Impedance](./figures/impedance_plot.png) |
 |:--:|

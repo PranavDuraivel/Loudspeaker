@@ -74,13 +74,12 @@ This project presents the **design, analytical modeling, and numerical simulatio
 
 ---
 
-### 📊 Real and Imaginary Parts of Impedance
+### ⚙️ Real & Imaginary Parts of Impedance
 
-| ![Real and Imaginary Parts of Impedance](./figures/real_and_imaginary_parts_of_impedance.png) |
+| ![Real/Imag Impedance](./figures/real_imag_impedance.png) |
 |:--:|
-| *Figure: Peaks at 3.5% near 131 Hz, ~1.5% midrange typical for sealed-box drivers* |
+| *Figure: Real and imaginary parts of impedance — shows energy dissipation and phase behavior across frequency* |
 
----
 
 ## 🔍 Insights
 

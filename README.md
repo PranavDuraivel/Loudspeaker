@@ -215,7 +215,7 @@ COMSOL Multiphysics was used to simulate the loudspeaker's vibroacoustic perform
 
 ### 🧱 Geometry & Mesh
 
-| Meshed Driver & Cabinet | PML for Free Field Simulation |
+| Meshed Driver & Cabinet | Free Field Simulation |
 |-------------------------|-------------------------------|
 | ![Mesh](./comsol/mesh_driver.png) | ![PML](./comsol/pml_free_field.png) |
 
@@ -232,12 +232,12 @@ Red: Analytical | Green: Simulated
 
 ---
 
-### 📈 Impedance Plot
+### 📈 PML for Free Field
 
-| Electrical Impedance |
-|----------------------|
-| ![Impedance](./comsol/electrical_impedance.png) |
-| *Figure: Simulated impedance curve showing resonant peak and electrical behavior.* |
+| PML Mesh |
+|----------|
+| ![Impedance](./comsol/pml_mesh.png) |
+| *Figure: Simulated model with free field.* |
 
 ---
 

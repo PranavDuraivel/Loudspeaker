@@ -207,6 +207,70 @@ Z_M = R_M + j(ωM_MS - 1 ÷ (ωC_MT))
 
 ---
 
+## 🧪 COMSOL Simulation Dashboard
+
+COMSOL Multiphysics was used to simulate the loudspeaker's vibroacoustic performance, including the interaction of the **moving coil**, **magnetic field**, and **sound radiation** into a free field using **PML boundaries**.
+
+---
+
+### 🧱 Geometry & Mesh
+
+| Meshed Driver & Cabinet | PML for Free Field Simulation |
+|-------------------------|-------------------------------|
+| ![Mesh](./comsol/mesh_driver.png) | ![PML](./comsol/pml_free_field.png) |
+
+---
+
+### 📊 Frequency Response Comparison
+
+Red: Analytical | Green: Simulated
+
+| Frequency Response |
+|--------------------|
+| ![Frequency Response](./comsol/freq_response_comparison.png) |
+| *Figure: SPL comparison showing good match at mid-frequencies; 5 dB dip near 600 Hz due to antiresonance and cabinet damping.* |
+
+---
+
+### 📈 Impedance Plot
+
+| Electrical Impedance |
+|----------------------|
+| ![Impedance](./comsol/electrical_impedance.png) |
+| *Figure: Simulated impedance curve showing resonant peak and electrical behavior.* |
+
+---
+
+### 🔊 Acoustic Field & Radiation
+
+| Sound Pressure Field | Acoustic Directivity |
+|----------------------|----------------------|
+| ![SPL Radiation](./comsol/spl_radiation.png) | ![Directivity](./comsol/directivity_plot.png) |
+| *Left: SPL field emitted by cone into free field. Right: Directivity pattern showing front-biased radiation.* |
+
+---
+
+### 🪶 Mechanical Displacement
+
+| Diaphragm Displacement |
+|------------------------|
+| ![Displacement](./comsol/diaphragm_displacement.png) |
+| *Figure: Peak displacement observed near resonant frequency.* |
+
+---
+
+### 📌 Summary
+
+- ✅ **Mesh Control:** Refined in eddy-current and diaphragm zones
+- ✅ **Frequency Domain Study:** 10–5000 Hz
+- ✅ **Realistic Cabinet Material:** Spruce with Melamine Foam lining
+- ✅ **Stiffness-Driven Anti-resonance** at 600 Hz
+
+---
+
+> 📁 *All images are stored in the `comsol/` folder for reference and reproducibility.*
+
+
 ## 📁 Project Structure
 
 ```bash

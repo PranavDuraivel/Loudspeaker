@@ -40,152 +40,107 @@ This project presents the **design, analytical modeling, and numerical simulatio
 
 ---
 
----
-
 ## 🧮 Analytical Calculations
 
-All analytical computations are performed using Python and follow fundamental acoustics and electromechanical transduction principles. Below is a breakdown of key formulas and results.
+All analytical computations are performed using Python based on standard electroacoustic formulas. Here's a breakdown of major formulas and results:
 
 ---
 
 ### 🎛️ 1. Voice Coil Design
 
-**Number of Turns**  
-\[
-N = \frac{l_{\text{coil}} \times \text{layers}}{2 \times r_{\text{wire}}} = 533.3
-\]
+- **Number of Turns:**  
+  N = (l_coil × layers) ÷ (2 × r_wire) = **533.3**
 
-**Wire Length**  
-\[
-l_{\text{wire}} = 2\pi r_{\text{coil}} \times N = 6.7 \, \text{m}
-\]
+- **Wire Length:**  
+  l_wire = 2π × r_coil × N = **6.7 m**
 
-**Mass of Voice Coil**  
-\[
-M_{\text{wire}} = \frac{N(2r_{\text{coil}})\pi^2 (2r_{\text{wire}})^2 \rho}{4} = 1.01 \, \text{g}
-\]
+- **Mass of Voice Coil:**  
+  M_wire = [N × (2 × r_coil) × π² × (2 × r_wire)² × ρ] ÷ 4 = **1.01 g**
 
-**Electrical Resistance**  
-\[
-R_E = \frac{4 r_{\text{coil}} l_{\text{coil}} \rho}{(2r_{\text{wire}})^3} = 6.9 \, \Omega
-\]
+- **Electrical Resistance:**  
+  R_E = [4 × r_coil × l_coil × ρ] ÷ (2 × r_wire)³ = **6.9 Ω**
 
-**Inductance**  
-\[
-L_E = \frac{\mu_r \mu_0 N^2 \pi r_{\text{coil}}^2}{h_{\text{coil}}} = 0.561 \, \text{mH}
-\]
+- **Inductance:**  
+  L_E = [μ_r × μ₀ × N² × π × r_coil²] ÷ h_coil = **0.561 mH**
 
 ---
 
 ### 🪶 2. Diaphragm & Cabinet Calculations
 
-**Diaphragm Area**  
-\[
-S_D = \pi r^2 = 0.0154 \, \text{m}^2
-\]
+- **Diaphragm Area:**  
+  S_D = π × r² = **0.0154 m²**
 
-**Cabinet Volume**  
-\[
-V = H \times W \times D = 0.2 \times 0.192 \times 0.18 = 0.00691 \, \text{m}^3
-\]
+- **Cabinet Volume:**  
+  V = H × W × D = 0.2 × 0.192 × 0.18 = **0.00691 m³**
 
-**Cabinet Stiffness**  
-\[
-K_{\text{cab}} = \frac{\rho_0 c_0^2 S_D^2}{V} = 4755.84 \, \text{N/m}
-\]
+- **Cabinet Stiffness:**  
+  K_cab = (ρ₀ × c₀² × S_D²) ÷ V = **4755.84 N/m**
 
-**Total Stiffness**  
-\[
-K_T = K_{\text{suspension}} + K_{\text{cab}} = 2800 + 4755.84 = 7555.84 \, \text{N/m}
-\]
+- **Total Stiffness:**  
+  K_T = K_suspension + K_cab = 2800 + 4755.84 = **7555.84 N/m**
 
-**Diaphragm Mass**  
-\[
-M_D = \rho \times S_D \times t = 10.1 \, \text{g}
-\]
+- **Diaphragm Mass:**  
+  M_D = ρ × S_D × t = **10.1 g**
 
-**Total Moving Mass**  
-\[
-M_{\text{MS}} = M_D + M_{\text{wire}} = 11.11 \, \text{g}
-\]
+- **Total Moving Mass:**  
+  M_MS = M_D + M_wire = **11.11 g**
 
 ---
 
-### 🔁 3. Thiele-Small Parameters
+### ⚙️ 3. Thiele-Small Parameters
 
-| Parameter | Value       | Unit    |
-|-----------|-------------|---------|
-| Resonant Frequency (\(f_s\)) | 131.56     | Hz      |
-| Compliance (\(C_{MS}\))      | \(3.57 \times 10^{-4}\) | m/N     |
-| Stiffness (\(K_T\))          | 7555.84    | N/m     |
-| Moving Mass (\(M_{MS}\))     | 11.11      | g       |
-| Force Factor (\(BL\))        | 6.7        | T·m     |
-| Quality Factor (Qms)         | 1.52       | —       |
-| Electrical Q (Qes)           | 1.40       | —       |
-| Total Q (Qts)                | 0.73       | —       |
+| Parameter               | Value           |
+|-------------------------|-----------------|
+| Resonant Frequency (f_s)| 131.56 Hz       |
+| Compliance (C_MS)       | 3.57×10⁻⁴ m/N   |
+| Total Stiffness (K_T)   | 7555.84 N/m     |
+| Moving Mass (M_MS)      | 11.11 g         |
+| Force Factor (BL)       | 6.7 T·m         |
+| Mechanical Q (Q_ms)     | 1.52            |
+| Electrical Q (Q_es)     | 1.40            |
+| Total Q (Q_ts)          | 0.73            |
 
 ---
 
 ### 🔊 4. Sound Pressure Level (SPL)
 
-Using:
+**Pressure Formula:**  
+P(f) = (ρ₀ × ω × Q_v) ÷ (2π × r)
 
-\[
-P(f) = \frac{\rho_0 \omega Q_v}{2\pi r}
-\]
-
-Where volume velocity \( Q_v \) is derived from the electromechanical model.
-
-SPL is then:
-
-\[
-SPL = 20 \log_{10} \left(\frac{P(f)}{20 \mu Pa} \right)
-\]
+**SPL Formula:**  
+SPL = 20 × log₁₀(P / 20 μPa)
 
 ---
 
 ### 📉 5. Displacement Amplitude
 
-\[
-X(f) = \frac{Q_v}{j \omega S_D}
-\]
+**Displacement:**  
+X(f) = Q_v ÷ (j × ω × S_D)
 
-- Max displacement: 0.35 mm at low frequencies
-- Controlled at resonance via damping
+Max displacement occurs below 150 Hz — controlled near resonance.
 
 ---
 
 ### ⚡ 6. Electrical Impedance
 
-\[
-Z_E = R_E + j\omega L_E + \frac{(BL)^2}{Z_M}
-\]
+**Electrical Impedance:**  
+Z_E = R_E + jωL_E + (BL)² ÷ Z_M
 
-Where mechanical impedance:
-
-\[
-Z_M = R_M + j(\omega M_{MS} - \frac{1}{\omega C_{MT}})
-\]
+**Mechanical Impedance:**  
+Z_M = R_M + j(ωM_MS - 1 ÷ (ωC_MT))
 
 ---
 
-### 🔋 7. Electroacoustic Efficiency
+### 🔋 7. Efficiency
 
-\[
-\eta_{EA} = \frac{W_A}{W_E} \times 100
-\]
+**Electroacoustic Efficiency:**  
+η_EA = (W_A ÷ W_E) × 100
 
-Where:
-
-- \(W_A = \frac{|Q_v|^2 \cdot \text{Re}(Z_{acoustic})}{2}\)
-- \(W_E = \frac{|I|^2 R_E}{2}\)
-
-- Peak Efficiency: **~3.5%**
-- Midrange Efficiency: **~1.5%**
+- W_A = |Q_v|² × Re(Z_acoustic) ÷ 2  
+- W_E = |I|² × R_E ÷ 2  
+- Peak: **3.5%**, Midrange: **~1.5%**
 
 ---
-
-
 
 ## 📈 Visual Analysis
 

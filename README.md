@@ -49,42 +49,63 @@ All analytical computations are performed using Python based on standard electro
 ### 🎛️ 1. Voice Coil Design
 
 - **Number of Turns:**  
-  N = (l_coil × layers) ÷ (2 × r_wire) = **533.3**
+```math
+N = \frac{l_\text{coil} \times \text{layers}}{2 \times r_\text{wire}} = 533.3
+```
 
 - **Wire Length:**  
-  l_wire = 2π × r_coil × N = **6.7 m**
+```math
+l_\text{wire} = 2\pi \times r_\text{coil} \times N = 6.7 \, \text{m}
+```
 
 - **Mass of Voice Coil:**  
-  M_wire = [N × (2 × r_coil) × π² × (2 × r_wire)² × ρ] ÷ 4 = **1.01 g**
+```math
+M_\text{wire} = \frac{N \times (2 \times r_\text{coil}) \times \pi^2 \times (2 \times r_\text{wire})^2 \times \rho}{4} = 1.01 \, \text{g}
+```
 
 - **Electrical Resistance:**  
-  R_E = [4 × r_coil × l_coil × ρ] ÷ (2 × r_wire)³ = **6.9 Ω**
+```math
+R_E = \frac{4 \times r_\text{coil} \times l_\text{coil} \times \rho}{(2 \times r_\text{wire})^3} = 6.9 \, \Omega
+```
 
 - **Inductance:**  
-  L_E = [μ_r × μ₀ × N² × π × r_coil²] ÷ h_coil = **0.561 mH**
+```math
+L_E = \frac{\mu_r \times \mu_0 \times N^2 \times \pi \times r_\text{coil}^2}{h_\text{coil}} = 0.561 \, \text{mH}
+```
 
 ---
 
 ### 🪶 2. Diaphragm & Cabinet Calculations
 
 - **Diaphragm Area:**  
-  S_D = π × r² = **0.0154 m²**
+```math
+S_D = \pi \times r^2 = 0.0154 \, \text{m}^2
+```
 
 - **Cabinet Volume:**  
-  V = H × W × D = 0.2 × 0.192 × 0.18 = **0.00691 m³**
+```math
+V = H \times W \times D = 0.2 \times 0.192 \times 0.18 = 0.00691 \, \text{m}^3
+```
 
 - **Cabinet Stiffness:**  
-  K_cab = (ρ₀ × c₀² × S_D²) ÷ V = **4755.84 N/m**
+```math
+K_\text{cab} = \frac{\rho_0 \times c_0^2 \times S_D^2}{V} = 4755.84 \, \text{N/m}
+```
 
 - **Total Stiffness:**  
-  K_T = K_suspension + K_cab = 2800 + 4755.84 = **7555.84 N/m**
+```math
+K_T = K_\text{suspension} + K_\text{cab} = 2800 + 4755.84 = 7555.84 \, \text{N/m}
+```
 
 - **Diaphragm Mass:**  
-  M_D = ρ × S_D × t = **10.1 g**
+```math
+M_D = \rho \times S_D \times t = 10.1 \, \text{g}
+```
 
 - **Total Moving Mass:**  
-  M_MS = M_D + M_wire = **11.11 g**
-
+```math
+M_\text{MS} = M_D + M_\text{wire} = 11.11 \, \text{g}
+```
 ---
 
 ### ⚙️ 3. Thiele-Small Parameters
@@ -104,43 +125,61 @@ All analytical computations are performed using Python based on standard electro
 
 ### 🔊 4. Sound Pressure Level (SPL)
 
-**Pressure Formula:**  
-P(f) = (ρ₀ × ω × Q_v) ÷ (2π × r)
+- **Pressure Formula:**  
+```math
+P(f) = \frac{\rho_0 \times \omega \times Q_v}{2\pi \times r}
+```
 
-**SPL Formula:**  
-SPL = 20 × log₁₀(P / 20 μPa)
+- **SPL Formula:**  
+```math
+\text{SPL} = 20 \times \log_{10}\left(\frac{P}{20 \, \mu\text{Pa}}\right)
+```
 
 ---
 
 ### 📉 5. Displacement Amplitude
 
-**Displacement:**  
-X(f) = Q_v ÷ (j × ω × S_D)
+- **Displacement:**  
+```math
+X(f) = \frac{Q_v}{j \times \omega \times S_D}
+```
 
-Max displacement occurs below 150 Hz — controlled near resonance.
+*Max displacement occurs below 150 Hz — controlled near resonance.*
 
 ---
 
 ### ⚡ 6. Electrical Impedance
 
-**Electrical Impedance:**  
-Z_E = R_E + jωL_E + (BL)² ÷ Z_M
+- **Electrical Impedance:**  
+```math
+Z_E = R_E + j\omega L_E + \frac{(BL)^2}{Z_M}
+```
 
-**Mechanical Impedance:**  
-Z_M = R_M + j(ωM_MS - 1 ÷ (ωC_MT))
+- **Mechanical Impedance:**  
+```math
+Z_M = R_M + j\left(\omega M_\text{MS} - \frac{1}{\omega C_\text{MT}}\right)
+```
 
 ---
 
 ### 🔋 7. Efficiency
 
-**Electroacoustic Efficiency:**  
-η_EA = (W_A ÷ W_E) × 100
+- **Electroacoustic Efficiency:**  
+```math
+\eta_\text{EA} = \left(\frac{W_A}{W_E}\right) \times 100
+```
 
-- W_A = |Q_v|² × Re(Z_acoustic) ÷ 2  
-- W_E = |I|² × R_E ÷ 2  
-- Peak: **3.5%**, Midrange: **~1.5%**
+Where:  
+```math
+W_A = \frac{|Q_v|^2 \times \text{Re}(Z_\text{acoustic})}{2}
+```
 
----
+```math
+W_E = \frac{|I|^2 \times R_E}{2}
+```
+
+- **Peak:** 3.5%  
+- **Midrange:** ~1.5%
 
 ## 📈 Visual Analysis
 

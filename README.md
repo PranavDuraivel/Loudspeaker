@@ -274,9 +274,11 @@ Red: Analytical | Green: Simulated
 ### 🔊 Acoustic Field & Radiation
 
 | Sound Pressure Field | 
-|----------------------|
-| ![SPL Radiation](./comsol/spl_radiation.png) | 
-| *Figure: SPL field emitted by cone into free field.* |
+|---------------------------------------------|
+<p align="center">
+  <img src="comsol/spl_radiation.png"/>
+  <br/><i>SPL field emitted by cone into free field</i>
+</p>
 
 ---
 
@@ -290,9 +292,9 @@ Red: Analytical | Green: Simulated
 ### 🪶 Mechanical Displacement
 
 | Diaphragm Displacement |
-|------------------------|
+|-------------------------------------------|
 <p align="center">
-  <img src="comsol/diaphragm_displacement.png" width="700"/>
+  <img src="comsol/diaphragm_displacement.png"/>
   <br/><i>Peak displacement observed near resonant frequency</i>
 </p>
 

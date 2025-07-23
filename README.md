@@ -287,6 +287,8 @@ Red: Analytical | Green: Simulated
 | ![SPL Radiation](./comsol/spl_radiation.png) | 
 | *Figure: SPL field emitted by cone into free field.* |
 
+---
+
 |![Directivity](./comsol/directivity_plot.png) |
 | *Figure: Directivity pattern showing front-biased radiation.* |
 

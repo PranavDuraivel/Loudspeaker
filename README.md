@@ -315,19 +315,3 @@ Red: Analytical | Green: Simulated
 ---
 
 > 📁 *All images are stored in the `comsol/` folder for reference and reproducibility.*
-
-
-## 📁 Project Structure
-
-```bash
-📦 Loudspeaker-Design
-├── 📂 models
-│   ├── analytical_model.py       # Python model with SPL, impedance, etc.
-│   └── comsol_model/             # COMSOL project files and setup
-├── 📂 figures
-│   ├── spl_plot.png
-│   ├── displacement_plot.png
-│   ├── impedance_plot.png
-│   └── efficiency_plot.png
-├── 📄 report.pdf                 # Full detailed report
-└── README.md                    # This file

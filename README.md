@@ -206,39 +206,6 @@ W_E = \frac{|I|^2 \times R_E}{2}
   </tr>
 </table>
 
-
-### 🔊 Sound Pressure Level (SPL)
-
-| ![SPL Graph](./figures/spl_plot.png) |
-|:--:|
-| *Figure: SPL across frequency (flat from 150 Hz to 5 kHz)* |
-
----
-
-### 🧷 Diaphragm Displacement
-
-| ![Displacement](./figures/displacement_plot.png) |
-|:--:|
-| *Figure: Maximum displacement occurs <150 Hz, controlled at resonance* |
-
----
-
-### ⚡ Electrical Impedance 
-
-| ![Impedance](./figures/impedance_plot.png) |
-|:--:|
-| *Figure: Peak impedance near resonance (14 Ω), nominal 8 Ω* |
-
----
-
-### 📊 Electroacoustic Efficiency
-
-| ![Efficiency](./figures/efficiency_plot.png) |
-|:--:|
-| *Figure: Peaks at 3.5% near 131 Hz, ~1.5% midrange typical for sealed-box drivers* |
-
----
-
 ### ⚙️ Real & Imaginary Parts of Impedance
 
 | ![Real/Imag Impedance](./figures/real_imag_impedance_plot.png) |
@@ -324,8 +291,10 @@ Red: Analytical | Green: Simulated
 
 | Diaphragm Displacement |
 |------------------------|
-| ![Displacement](./comsol/diaphragm_displacement.png) |
-| *Figure: Peak displacement observed near resonant frequency.* |
+<p align="center">
+  <img src="comsol/diaphragm_displacement.png" width="700"/>
+  <br/><i>Peak displacement observed near resonant frequency</i>
+</p>
 
 ---
 

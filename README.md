@@ -282,13 +282,15 @@ Red: Analytical | Green: Simulated
 
 ### 🔊 Acoustic Field & Radiation
 
-| Sound Pressure Field | Acoustic Directivity |
-|----------------------|----------------------|
+| Sound Pressure Field | 
+|----------------------|
 | ![SPL Radiation](./comsol/spl_radiation.png) | 
 | *Figure: SPL field emitted by cone into free field.* |
 
 ---
 
+| Acoustic Directivity |
+|----------------------|
 |![Directivity](./comsol/directivity_plot.png) |
 | *Figure: Directivity pattern showing front-biased radiation.* |
 

@@ -183,6 +183,30 @@ W_E = \frac{|I|^2 \times R_E}{2}
 
 ## 📈 Visual Analysis
 
+<table>
+  <tr>
+    <td align="center">
+      <img src="figures/spl_plot.png" width="500"/><br/>
+      <sub>SPL frequency range covering 5 Hz to 1500 kHz</sub>
+    </td>
+    <td align="center">
+      <img src="figures/displacement_plot.png" width="500"/><br/>
+      <sub>Maximum displacement occurs <150 Hz, controlled at resonance</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="figures/impedance_plot.png" width="500"/><br/>
+      <sub>Peak impedance near resonance (14 Ω), nominal 8 Ω</sub>
+    </td>
+    <td align="center">
+      <img src="figures/efficiency_plot.png" width="500"/><br/>
+      <sub>Peaks at 3.5% near 131 Hz, ~1.5% midrange typical for sealed-box driver</sub>
+    </td>
+  </tr>
+</table>
+
+
 ### 🔊 Sound Pressure Level (SPL)
 
 | ![SPL Graph](./figures/spl_plot.png) |

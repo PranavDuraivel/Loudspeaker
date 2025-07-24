@@ -273,12 +273,9 @@ Red: Analytical | Green: Simulated
 
 ### 🔊 Acoustic Field & Radiation
 
-| Sound Pressure Field | 
-|---------------------------------------------|
-<p align="center">
-  <img src="comsol/spl_radiation.png"/>
-  <br/><i>SPL field emitted by cone into free field</i>
-</p>
+| Surface total sound pressure  | Total acoustic pressuer |
+|-------------------------------|-------------------------|
+| ![SPL](./comsol/surtspl.png) | ![Pressure](./comsol/totalaspld.png) |
 
 ---
 

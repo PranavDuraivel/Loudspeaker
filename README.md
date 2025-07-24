@@ -275,7 +275,7 @@ Red: Analytical | Green: Simulated
 
 | Surface total sound pressure  | Total acoustic pressuer |
 |-------------------------------|-------------------------|
-| ![SPL](./comsol/surtspl.png) | ![Pressure](./comsol/totalaspld.png) |
+| ![SPL](./comsol/surtspl.png) | ![Pressure](./comsol/totalaspl.png) |
 
 ---
 

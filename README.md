@@ -288,10 +288,13 @@ Red: Analytical | Green: Simulated
 
 ### 🪶 Mechanical Displacement
 
+<div align="center">
+
 | Diaphragm Displacement |
-|-------------------------------------------|
+|------------------------|
+</div>
 <p align="center">
-  <img src="comsol/diaphragm_displacement.png"/>
+  <img src="comsol/diaphragm_displacement.png" />
   <br/><i>Peak displacement observed near resonant frequency</i>
 </p>
 

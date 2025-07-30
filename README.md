@@ -206,12 +206,13 @@ W_E = \frac{|I|^2 \times R_E}{2}
   </tr>
 </table>
 
-### ⚙️ Microphone Sensitivity
+### ⚙️ Real & Imaginary Parts of Impedance
 
-| ![Real/Imag Impedance](./figures/sensitivity.png) |
+| ![Real/Imag Impedance](./figures/real_imag_impedance_plot.png) |
 |:--:|
-| *Figure: Frequency response of the microphone showing sensitivity (in dB re 1 V/Pa).* |
+| *Figure: Real and imaginary parts of impedance — shows energy dissipation and phase behavior across frequency* |
 
+---
 
 ## 🔍 Insights
 
